@@ -15,16 +15,20 @@ public class Cartoes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String name;
+    @Column
     @Enumerated(EnumType.STRING)
     private CardBrand cardBrand;
+    @Column
     private BigDecimal income;
-    private BigDecimal limit;
+    @Column
+    private BigDecimal limitBasic;
 
-    public Cartoes(String name, CardBrand cardBrand, BigDecimal income, BigDecimal limit) {
+    public Cartoes(String name, CardBrand cardBrand, BigDecimal income, BigDecimal limitBasic) {
         this.name = name;
         this.cardBrand = cardBrand;
         this.income = income;
-        this.limit = limit;
+        this.limitBasic = limitBasic;
     }
 }
